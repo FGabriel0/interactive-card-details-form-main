@@ -1,0 +1,170 @@
+:root{
+    --color-primary:Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --input-erros:hsl(0, 100%, 66%);
+    --color-white:hsl(0, 0%, 100%);
+    --Light-grayish-violet:hsl(270, 3%, 87%);
+    --Dark-grayish-violet:hsl(279, 6%, 55%);
+    --Very-dark-violet:hsl(278, 68%, 11%);
+    --body-copy:18px;
+    --font-primary: "Space Grotesk";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(hsl(280, 100%, 5%),hsl(249, 99%, 10%), hsl(278, 94%, 30%));
+    background-repeat: no-repeat;
+    background-size: 30%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+   
+}
+
+
+.bola{
+    background-color: var(--color-white);
+    z-index: 99;
+    margin-left: 30px;
+    width: 10%;
+    height: 50px;
+    border-radius: 50%;
+}
+.container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+
+.card-front{
+    background: url("./assets/img/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin-left: 30px;
+    margin-top: -100px;
+    width: 80vh;
+    height: 65vh;
+    
+}
+
+.card-front h2{
+    text-align: center;
+    margin-right: 130px;
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: var(--font-primary);
+    color: var(--color-white);
+}
+.card-para{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 120px;
+    color: var(--color-white);
+}
+.card-back{
+    background: url('./assets/img/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-size: 25rem;
+    margin-left: 100px;
+    margin-top: -150px;
+    height: 19rem;
+
+}
+.back-para{
+    text-align: right;
+    margin-right: 100px;
+    margin-top: -205px;
+
+}
+/* Form */
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 ;
+} 
+
+label{
+    text-align: right;
+    margin-top: 10px;
+}
+form input[placeholder]{
+    padding: 8px;
+}
+form input{
+    width: 100%;
+    height: 20px;
+    border-radius: 8px;
+    border: solid 1px var(--Dark-grayish-violet);
+}
+.data-cvc{
+    display: flex;
+}.data-cvc label{
+    display: flex;
+}
+.data{
+    margin-right: 40px;
+}
+form span{
+    color: var(--input-erros);
+}
+.btn{
+    margin-top: 20px;
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--Very-dark-violet);
+}
+
+.sidebar{
+    text-align: center;
+    position: fixed;
+    z-index: 99;
+    width: 40rem;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    top: 0;
+    right: -50rem;
+    transition: all 1s;
+}
+.show-menu .sidebar{
+    right: 0;
+}
+.sidebar .sucesso{
+    justify-content: center;
+    margin-top: 170px;
+
+}
+.sidebar .sucesso h1{
+    margin-top: 10px;
+}
+.sidebar .sucesso button{
+    border: transparent;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--Very-dark-violet);
+}
+.sidebar .sucesso button a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+

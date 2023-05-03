@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive-card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form-container">
+            <div class="card-front">
+                <div class="bola"></div>
+                <h2 id="Num"><span id="parte1">0000</span><span id="parte2"> 0000</span><span id="parte3">
+                        0000</span><span id="parte4"> 0000</span></h2>
+                <div class="card-para">
+                    <p id="Name">##########</p>
+                    <p id="Data">#####</p>
+                </div>
+            </div>
+
+            <div class="card-back">
+            </div>
+            <p class="back-para" id="CVC">###</p>
+
+        </div>
+
+        <aside class="sidebar">
+            <div class="sucesso">
+                <img src="./assets/img/icon-complete.svg" alt="complete">
+                <h1>Thank You</h1>
+                <h3>Want to create a new card</h3>
+                <button id="sucesso-btn" class="btnsucesso"><a href="index.html">Continue</a></button>
+            </div>
+
+        </aside>
+
+        <form>
+            <label>Nome no Cartão:</label>
+            <input type="text" name="nome" id="inName" required autofocus placeholder="e.g João Pessoa">
+            <span id="nameErro"></span>
+
+            <label>Número do cartão:</label>
+            <input type="number" name="number" id="inNumber" requiredrequired maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+            <span id="numErro"></span>
+
+            <div class="data-cvc">
+                <div class="data">
+                    <label>Data(MM/YY): </label>
+                    <input type="number" name="mes" id="inMes" placeholder="MM" required style="width: 50px;" min="2">
+                    <input type="number" name="ano" id="inAno" placeholder="YY" required style="width: 50px;" maxlength="4">
+                    <br>
+                    <span id="dataErro"></span>
+                </div>
+                <div class="cvc">
+
+                    <label>Cvc</label>
+                    <input type="number" name="cvc" id="inCvc" placeholder="e.g 123" style="width: 100px;" required>
+                    <br>
+                    <span id="cvcErro"></span>
+                </div>
+            </div>
+            <input class="btn" type="submit" value="Confirmar">
+        </form>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>
